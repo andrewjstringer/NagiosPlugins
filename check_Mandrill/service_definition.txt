@@ -1,0 +1,10 @@
+#Services
+define service {
+        use                             generic-service
+        host_name                       mandrillmail
+        service_description             Mandrill Mail Stats
+        check_command                   check_mandrill!YOUR-API-KEY!150!75!8000!9000!10!20
+        #contact_groups                  unixadmin
+        check_interval                  1
+        retry_interval                  1
+}
