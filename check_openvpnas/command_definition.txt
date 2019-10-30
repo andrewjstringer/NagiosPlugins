@@ -1,0 +1,5 @@
+#Check OpenVPN as parameters
+define command {
+        command_name    check_by_ssh-check_openvpnas
+        command_line    /usr/lib/nagios/plugins/check_by_ssh -H $HOSTADDRESS$ -E -C "/home/nagios/checks/check_openvpnas.sh $ARG1$ "
+}
