@@ -1,0 +1,25 @@
+#OpenVPN AS checks
+
+define service{
+        use                             generic-service
+        host_name                       vpnserver1
+        service_description             Check OpenvpnAS licence usage
+        check_command                   check_by_ssh-check_openvpnas!LicUsage
+        contact_groups                  vpnadmin
+        }
+define service{
+        use                             generic-service
+        host_name                       vpnserver1
+        service_description             Check OpenvpnAS VPN usage
+        check_command                   check_by_ssh-check_openvpnas!VPNSummary
+        contact_groups                  vpnadmin
+        }
+define service{
+        use                             generic-service
+        host_name                       vpnserver1
+        service_description             Check OpenvpnAS licence expiry
+        check_command                   check_by_ssh-check_openvpnas!LICexpire
+        contact_groups                  vpnadmin
+        }
+
+ 
