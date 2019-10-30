@@ -1,0 +1,8 @@
+# 'check_mandrill' command definition
+define command{
+        command_name    check_mandrill
+        #'$ARG1$'is API key, '$ARG2$' is warning threshold for min sent mail, '$ARG3$' is critical threshold for min sent mail
+        #'$ARG4$ is max mail warning, '$ARG5$' is max mail critical, '$ARG6$' is warning backlog, '$ARG7$' is critical backlog
+        command_line    /usr/lib/nagios/plugins/check_mandrill.pl '$ARG1$' '$ARG2$' '$ARG3$' '$ARG4$' '$ARG5$' '$ARG6$' '$ARG7$'
+        }
+ 
