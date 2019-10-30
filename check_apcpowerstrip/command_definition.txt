@@ -1,0 +1,5 @@
+define command{
+        command_name    check_apcpowerstrip
+        command_line    /usr/lib/nagios/plugins/check_apcpowerstrip.sh '$HOSTADDRESS$' '$ARG1$' '$ARG2$'
+        }
+        
