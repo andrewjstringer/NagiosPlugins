@@ -1,0 +1,7 @@
+#APC PDU load
+define service{
+        use                             generic-service
+        host_name                       pdu-l, pdu-r
+        service_description             APC PDU Load Total
+        check_command                   check_apcpowerstrip!YourSNMPcommunityString
+        }
